@@ -51,3 +51,19 @@ footer {
         margin-bottom: 20px;
     }
 }
+
+/* Background */
+body {
+    background-image: url('background.jpg'); /* Ganti 'background.jpg' dengan nama file gambar latar belakang Anda */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Gambar Kursus */
+.kursus-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
