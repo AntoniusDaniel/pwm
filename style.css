@@ -4,23 +4,24 @@
     font-size: 14px;
     color: #888;
 }
+
 /* Sidebar */
-.sidebar {
+.col-lg-3 {
     background-color: #f8f9fa;
     padding: 20px;
     border-radius: 5px;
 }
 
-.sidebar .mentor {
+.col-lg-3 .mentor {
     font-size: 14px;
     color: #888;
 }
 
-.sidebar .mentor::before {
+.col-lg-3 .mentor::before {
     content: "(";
 }
 
-.sidebar .mentor::after {
+.col-lg-3 .mentor::after {
     content: ")";
 }
 
@@ -64,7 +65,7 @@ footer {
 
 @media (max-width: 768px) {
     /* Stack sidebar on top of main content in smaller devices */
-    .sidebar {
+    .col-lg-3 {
         margin-bottom: 20px;
     }
 }
