@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paket Kursus</title>
+    <title>KURSUS HILTON</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
@@ -11,9 +11,9 @@
 </head>
 <body>
     <!-- Header -->
-    <header class="bg-dark text-light py-3">
+    <header class="bg-secondary text-light py-3" style="font-family: 'Roboto', sans-serif;">
         <div class="container">
-            <h1 class="mb-0">Paket Kursus</h1>
+            <h1 class="mb-0">KURSUS HILTON</h1>
         </div>
     </header>
 
@@ -26,13 +26,13 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="#" onclick="showCourse('web')">Web</a>
+                        <a class="nav-link" href="#" onclick="showCourse('web')">Web Developer</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" onclick="showCourse('android')">Aplikasi Android</a>
+                        <a class="nav-link" href="#" onclick="showCourse('android')">Android Developer</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" onclick="showCourse('php')">PHP</a>
+                        <a class="nav-link" href="#" onclick="showCourse('php')">PHP Master</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#" onclick="showCourse('registration')">Pendaftaran Kursus</a>
@@ -50,15 +50,15 @@
                 <h3>Menu Kursus</h3>
                 <ul class="list-group">
                     <li class="list-group-item">
-                        <a href="#" onclick="showCourse('web')">Web <span class="mentor">(Mentor: Azis Extrama)</span></a>
+                        <a href="#" onclick="showCourse('web')">Web Developer<span class="mentor">(Mentor: Azis Extrama)</span></a>
                         <span class="additional-info">Durasi: 6 minggu</span>
                     </li>
                     <li class="list-group-item">
-                        <a href="#" onclick="showCourse('android')">Aplikasi Android <span class="mentor">(Mentor: Hilman Fadillah)</span></a>
+                        <a href="#" onclick="showCourse('android')">Android Developer<span class="mentor">(Mentor: Hilman Fadillah)</span></a>
                         <span class="additional-info">Durasi: 8 minggu</span>
                     </li>
                     <li class="list-group-item">
-                        <a href="#" onclick="showCourse('php')">PHP <span class="mentor">(Mentor: Brian Porpirid)</span></a>
+                        <a href="#" onclick="showCourse('php')">PHP Master<span class="mentor">(Mentor: Brian Porpirid)</span></a>
                         <span class="additional-info">Durasi: 4 minggu</span>
                     </li>
                     <li class="list-group-item">
@@ -78,7 +78,7 @@
 
             <!-- Right Sidebar -->
             <div class="col-lg-3">
-                <h3>Info Lain</h3>
+                <h3>Contact Person</h3>
                 <p>Wa: 08154245266</p>
                 <p>Ig: cimoncimon123</p>
                 <p>Mail: cimon12345@gmail.com</p>
@@ -87,10 +87,11 @@
     </div>
 
     <!-- Footer -->
-    <footer class="bg-dark text-light py-3 mt-5">
+    <footer class="bg-secondary text-light py-3 mt-5 fixed-bottom">
         <div class="container">
-            <p class="mb-0">© 2024 Paket Kursus. All rights reserved.</p>
+            <p class="mb-0">© 2024 ANTON & CIMON. All rights reserved.</p>
         </div>
+
     </footer>
 
     <!-- Bootstrap Bundle with Popper -->
@@ -106,19 +107,19 @@
 
             switch (course) {
                 case 'web':
-                    courseTitle.textContent = 'Kursus Web';
+                    courseTitle.textContent = 'Kursus Web Developer';
                     courseImage.src = 'https://www.onlinelogomaker.com/blog/wp-content/uploads/2020/09/1dbb4a00f3b2d8e85691bea98a621885.jpg';
                     courseDescription.textContent = 'Kursus Web dengan mentor Profesional Yaitu Azis Extrama';
                     additionalInfo.textContent = 'Durasi: 6 minggu';
                     break;
                 case 'android':
-                    courseTitle.textContent = 'Kursus Aplikasi Android';
+                    courseTitle.textContent = 'Kursus Android Developer';
                     courseImage.src = 'https://www.maxmanroe.com/wp-content/uploads/2016/04/aplikasi-android-populer.jpg';
                     courseDescription.textContent = 'Isi konten kursus aplikasi Android disini...';
                     additionalInfo.textContent = 'Durasi: 8 minggu';
                     break;
                 case 'php':
-                    courseTitle.textContent = 'Kursus PHP';
+                    courseTitle.textContent = 'Kursus PHP Master';
                     courseImage.src = 'https://s3.amazonaws.com/coursesity-blog/2019/01/php-1.png';
                     courseDescription.textContent = 'Isi konten kursus PHP disini...';
                     additionalInfo.textContent = 'Durasi: 4 minggu';
