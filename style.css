@@ -1,15 +1,32 @@
 /* Custom CSS Styles */
-
-/* Main Content Area */
-.container {
-    max-width: 1200px; /* Adjust as needed */
+/* Additional Info */
+.additional-info {
+    font-size: 14px;
+    color: #888;
 }
-
 /* Sidebar */
 .sidebar {
     background-color: #f8f9fa;
     padding: 20px;
     border-radius: 5px;
+}
+
+.sidebar .mentor {
+    font-size: 14px;
+    color: #888;
+}
+
+.sidebar .mentor::before {
+    content: "(";
+}
+
+.sidebar .mentor::after {
+    content: ")";
+}
+
+/* Main Content Area */
+.container {
+    max-width: 1200px; /* Adjust as needed */
 }
 
 /* Footer */
@@ -54,7 +71,7 @@ footer {
 
 /* Background */
 body {
-    background-image: url('background.jpg'); /* Ganti 'background.jpg' dengan nama file gambar latar belakang Anda */
+    background-image: url('https://blog.openclassrooms.com/es/wp-content/uploads/sites/5/2017/09/AdobeStock_126016889apaisado.jpg'); /* Ganti 'background.jpg' dengan nama file gambar latar belakang Anda */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;

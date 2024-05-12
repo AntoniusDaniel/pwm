@@ -26,24 +26,16 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <img src="https://example.com/web-icon.png" alt="Web Icon" class="menu-icon"> Web
-                        </a>
+                        <a class="nav-link" href="#" onclick="showCourse('web')">Web</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <img src="https://example.com/android-icon.png" alt="Android Icon" class="menu-icon"> Aplikasi Android
-                        </a>
+                        <a class="nav-link" href="#" onclick="showCourse('android')">Aplikasi Android</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <img src="https://example.com/php-icon.png" alt="PHP Icon" class="menu-icon"> PHP
-                        </a>
+                        <a class="nav-link" href="#" onclick="showCourse('php')">PHP</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <img src="https://example.com/registration-icon.png" alt="Registration Icon" class="menu-icon"> Pendaftaran Kursus
-                        </a>
+                        <a class="nav-link" href="#" onclick="showCourse('registration')">Pendaftaran Kursus</a>
                     </li>
                 </ul>
             </div>
@@ -57,24 +49,39 @@
             <div class="col-lg-3">
                 <h3>Menu Kursus</h3>
                 <ul class="list-group">
-                    <li class="list-group-item"><a href="#">Web</a></li>
-                    <li class="list-group-item"><a href="#">Aplikasi Android</a></li>
-                    <li class="list-group-item"><a href="#">PHP</a></li>
-                    <li class="list-group-item"><a href="#">Pendaftaran Kursus</a></li>
+                    <li class="list-group-item">
+                        <a href="#" onclick="showCourse('web')">Web <span class="mentor">(Mentor: Azis Extrama)</span></a>
+                        <span class="additional-info">Durasi: 6 minggu</span>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="#" onclick="showCourse('android')">Aplikasi Android <span class="mentor">(Mentor: Hilman Fadillah)</span></a>
+                        <span class="additional-info">Durasi: 8 minggu</span>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="#" onclick="showCourse('php')">PHP <span class="mentor">(Mentor: Brian Porpirid)</span></a>
+                        <span class="additional-info">Durasi: 4 minggu</span>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="#" onclick="showCourse('registration')">Pendaftaran Kursus <span class="mentor">(Mentor: Antonius Daniel)</span></a>
+                        <span class="additional-info">Pembayaran diperlukan</span>
+                    </li>
                 </ul>
             </div>
 
             <!-- Main Content Area -->
             <div class="col-lg-6">
-                <h2>Kursus Web</h2>
-                <img src="https://wallpaperset.com/w/full/6/e/2/461150.jpg" alt="Kursus Web" class="img-fluid kursus-img">
-                <p>Isi konten kursus web disini...</p>
+                <h2 id="courseTitle">Kursus</h2>
+                <img id="courseImage" src="https://blog.openclassrooms.com/es/wp-content/uploads/sites/5/2017/09/AdobeStock_126016889apaisado.jpg" alt="Kursus Web" class="img-fluid kursus-img">
+                <p id="courseDescription">Kursus Teknologi informasi Terlengkap dengan mentor Profesional</p>
+                <p id="additionalInfo"></p>
             </div>
 
             <!-- Right Sidebar -->
             <div class="col-lg-3">
                 <h3>Info Lain</h3>
-                <p>Info lainnya disini...</p>
+                <p>Wa: 08154245266</p>
+                <p>Ig: cimoncimon123</p>
+                <p>Mail: cimon12345@gmail.com</p>
             </div>
         </div>
     </div>
@@ -88,5 +95,44 @@
 
     <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JavaScript -->
+    <script>
+        function showCourse(course) {
+            var courseTitle = document.getElementById('courseTitle');
+            var courseImage = document.getElementById('courseImage');
+            var courseDescription = document.getElementById('courseDescription');
+            var additionalInfo = document.getElementById('additionalInfo');
+
+            switch (course) {
+                case 'web':
+                    courseTitle.textContent = 'Kursus Web';
+                    courseImage.src = 'https://www.onlinelogomaker.com/blog/wp-content/uploads/2020/09/1dbb4a00f3b2d8e85691bea98a621885.jpg';
+                    courseDescription.textContent = 'Kursus Web dengan mentor Profesional Yaitu Azis Extrama';
+                    additionalInfo.textContent = 'Durasi: 6 minggu';
+                    break;
+                case 'android':
+                    courseTitle.textContent = 'Kursus Aplikasi Android';
+                    courseImage.src = 'https://www.maxmanroe.com/wp-content/uploads/2016/04/aplikasi-android-populer.jpg';
+                    courseDescription.textContent = 'Isi konten kursus aplikasi Android disini...';
+                    additionalInfo.textContent = 'Durasi: 8 minggu';
+                    break;
+                case 'php':
+                    courseTitle.textContent = 'Kursus PHP';
+                    courseImage.src = 'https://s3.amazonaws.com/coursesity-blog/2019/01/php-1.png';
+                    courseDescription.textContent = 'Isi konten kursus PHP disini...';
+                    additionalInfo.textContent = 'Durasi: 4 minggu';
+                    break;
+                case 'registration':
+                    courseTitle.textContent = 'Pendaftaran Kursus';
+                    courseImage.src = 'https://jagoanit.com/wp-content/uploads/2019/01/Screen-Shot-2019-01-29-at-19.15.20.png';
+                    courseDescription.textContent = 'Isi konten pendaftaran kursus disini...';
+                    additionalInfo.textContent = 'Pembayaran diperlukan';
+                    break;
+                default:
+                    break;
+            }
+        }
+    </script>
 </body>
 </html>
